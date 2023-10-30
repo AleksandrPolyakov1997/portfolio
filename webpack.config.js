@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'index.[contenthash].js',
-    assetModuleFilename: path.join('images', '[name].[contenthash][ext]'),
+    assetModuleFilename: path.join('path', '[name].[contenthash][ext]'),
   },
   module: {
     rules: [
@@ -33,8 +33,8 @@ module.exports = {
         },
       },
       {
-        test: /\.(woff2?|eot|ttf|otf)$/i,
-        type: 'asset/resource',
+        test: /\.(woff2|eot|ttf|otf)$/i,
+        type: 'asset/inline',
       },
     ],
   },
