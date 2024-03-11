@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'index.[contenthash].js',
-    assetModuleFilename: path.join('path', '[name].[contenthash][ext]'),
+    assetModuleFilename: path.join('images', '[name].[contenthash][ext]'),
   },
   module: {
     rules: [
@@ -16,6 +16,10 @@ module.exports = {
         test: /\.js$/,
         use: 'babel-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.(html)$/,
+        use: ['html-loader']
       },
       {
         test: /\.(scss|css)$/,
