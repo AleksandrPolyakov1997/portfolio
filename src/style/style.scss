@@ -134,8 +134,7 @@ body {
   width: 500px;
 }
 
-.about {
-  //width: 100%;
+.section {
   height: auto;
   padding: 50px 10vw;
 }
@@ -167,4 +166,58 @@ body {
 .about__img {
   width: 100%;
   object-fit: cover;
+}
+
+.skill-container{
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.skill-card{
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid #464646;
+  text-align: center;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.skill{
+  font-size: 2rem;
+  color: #464646;
+  line-height: 200px;
+}
+
+.skill-card:hover{
+  background: var(--bg);
+}
+
+.skill-card:hover .skill{
+  color: #fff;
+}
+
+.skill-card.large{
+  grid-column: 2 span;
+}
+
+.filters{
+  width: fit-content;
+  display: block;
+  margin: 100px auto;
+}
+
+.filter-btn{
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  text-transform: capitalize;
+  margin: 0 5px 10px;
+  cursor: pointer;
+}
+
+.filter-btn.active{
+  background: #ff3559;
+  color: #fff;
 }
