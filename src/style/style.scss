@@ -14,6 +14,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -275,4 +276,23 @@ body {
 
 .hide{
   display: none;
+}
+
+.contact-container{
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contact-link:hover{
+  opacity: 0.5;
+}
+
+.footer{
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  background-color: #ff3559;
+  text-transform: capitalize;
+  line-height: 30px;
 }

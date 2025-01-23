@@ -4,6 +4,7 @@ import './style/style.scss';
 import './images/how-to-learn.jpg';
 import './images/russian-travel.jpg';
 import './images/mesto.jpg';
+import './images/icons/github.png'
 
 let projects = [
   {
@@ -22,11 +23,6 @@ let projects = [
     image: "mesto.jpg"
   },
 ]
-
-console.log(projects)
-projects.forEach(p => {
-  console.log(p)
-})
 
 const projectContainer = document.querySelector('.project-container');
 
