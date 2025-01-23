@@ -2,4 +2,297 @@ $font-color: #1d1d1d;
 
 body {
   background: $font-color;
+  font-family: 'Roboto';
+  color: #fff;
+}
+
+.navbar {
+  width: 100%;
+  padding: 0 10vw;
+  box-sizing: border-box;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $font-color;
+}
+
+.logo {
+  font-weight: 500;
+}
+
+.links-container {
+  display: flex;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 10px;
+  padding: 10px;
+  position: relative;
+}
+
+.link.active::before, .seperator::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.link.active::after, .seperator::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
+
+.header {
+  height: auto;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  column-gap: 10px;
+  padding: 0 10vw;
+}
+
+.header_content {
+  max-width: 50%;
+}
+
+.title {
+  font-size: 5rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  margin: 0;
+}
+
+.title_highlight {
+  color: #ff3559;
+}
+
+.profession {
+  width: fit-content;
+  display: block;
+  margin: 10px 0 20px;
+  margin-left: auto;
+  text-transform: capitalize;
+  position: relative;
+  padding: 10px 20px;
+  color: #1d1d1d;
+  z-index: 2;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #e3e3e3;
+    z-index: -1;
+    transform: skewX(10deg);
+    position: absolute;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 100px;
+    height: 2px;
+    background: #e3e3e3;
+  }
+}
+
+.info {
+  margin-bottom: 50px;
+}
+
+.btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  background: #ff3559;
+  border-radius: 50px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.header-image {
+  width: 500px;
+}
+
+.section {
+  height: auto;
+  padding: 50px 10vw;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 3.5rem;
+}
+
+.seperator {
+  width: 25%;
+  margin: 20px auto;
+  position: relative;
+}
+
+.about__content {
+  margin: 150px 0 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-gap: 50px;
+}
+
+.left-col {
+
+}
+
+.about__img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.skill-container{
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.skill-card{
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid #464646;
+  text-align: center;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.skill{
+  font-size: 2rem;
+  color: #464646;
+  line-height: 200px;
+}
+
+.skill-card:hover{
+  background: var(--bg);
+}
+
+.skill-card:hover .skill{
+  color: #fff;
+}
+
+.skill-card.large{
+  grid-column: 2 span;
+}
+
+.filters{
+  width: fit-content;
+  display: block;
+  margin: 100px auto;
+}
+
+.filter-btn{
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  text-transform: capitalize;
+  margin: 0 5px 10px;
+  cursor: pointer;
+}
+
+.filter-btn.active{
+  background: #ff3559;
+  color: #fff;
+}
+
+.project-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.project-card{
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+
+.card-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+  text-transform: capitalize;
+  opacity: 0;
+}
+
+.project-name{
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.tags{
+  position: absolute;
+  bottom: 20px;
+  opacity: 0.6;
+  width: 90%;
+}
+
+.card-content:hover{
+  opacity: 1;
+}
+
+.hide{
+  display: none;
+}
+
+.contact-container{
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contact-link:hover{
+  opacity: 0.5;
+}
+
+.footer{
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  background-color: #ff3559;
+  text-transform: capitalize;
+  line-height: 30px;
 }
